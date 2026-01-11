@@ -109,11 +109,106 @@
       }
     }
   </style>
+
+  /* ===== FAN CATEGORY SHOWCASE ===== */
+  .fan-showcase {
+  padding: 60px 6%;
+  }
+
+  .fan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  }
+
+  .fan-tile {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+  }
+
+  .fan-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  }
+
+  .fan-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+  to top,
+  rgba(0, 0, 0, 0.55),
+  rgba(0, 0, 0, 0.1)
+  );
+  transition: opacity 0.3s ease;
+  }
+
+  .fan-label {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.04em;
+  z-index: 2;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  /* Hover effects */
+  .fan-tile:hover img {
+  transform: scale(1.08);
+  }
+
+  .fan-tile:hover .fan-label {
+  font-size: 1.6rem;
+  transform: translateX(-50%) translateY(-6px);
+  }
+
+  /* Mobile */
+  @media (max-width: 900px) {
+  .fan-grid {
+  grid-template-columns: 1fr;
+  }
+  }
+
 </head>
 
 <body>
 
   <header>
+    <section class="fan-showcase">
+      <div class="fan-grid">
+
+        <!-- NECK FANS -->
+        <a href="#" class="fan-tile">
+          <img src="https://via.placeholder.com/800x600?text=Neck+Fans" alt="Neck Fans">
+          <div class="fan-label">Neck Fans</div>
+        </a>
+
+        <!-- HANDHELD FANS -->
+        <a href="#" class="fan-tile">
+          <img src="https://via.placeholder.com/800x600?text=Handheld+Fans" alt="Handheld Fans">
+          <div class="fan-label">Handheld Fans</div>
+        </a>
+
+        <!-- TABLE FANS -->
+        <a href="#" class="fan-tile">
+          <img src="https://via.placeholder.com/800x600?text=Table+Fans" alt="Table Fans">
+          <div class="fan-label">Table Fans</div>
+        </a>
+
+      </div>
+    </section>
+
     <div class="nav-container">
 
       <!-- LEFT -->
