@@ -138,7 +138,6 @@
       transition: transform 0.3s ease, font-size 0.3s ease;
     }
 
-    /* Hover effects */
     .fan-tile:hover img {
       transform: scale(1.08);
     }
@@ -148,7 +147,122 @@
       transform: translateX(-50%) translateY(-6px);
     }
 
-    /* SECTIONS */
+    /* ===== BEST SELLERS ===== */
+    .best-sellers {
+      padding: 60px 6%;
+    }
+
+    .best-sellers h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #b45309;
+      margin-bottom: 40px;
+    }
+
+    .product-row {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .product-card {
+      min-width: 220px;
+      flex: 0 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .product-card .price {
+      color: #b45309;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .product-card .rating {
+      color: #f59e0b;
+      font-size: 0.9rem;
+    }
+
+    /* ===== PERKS SECTION ===== */
+    .perks {
+      background: linear-gradient(to bottom, #fff7ed, #fff1e0);
+      padding: 80px 6%;
+      text-align: center;
+      border-radius: 20px;
+      margin: 60px 0;
+    }
+
+    .perks h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #b45309;
+    }
+
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .perk-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .perk-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .perk-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .perk-card p {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    /* ===== SECTIONS / FOOTER ===== */
     section {
       padding: 80px 10%;
     }
@@ -162,7 +276,13 @@
       border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    /* RESPONSIVE */
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .perks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 900px) {
       .main-menu {
         display: none;
@@ -170,6 +290,18 @@
 
       .fan-grid {
         grid-template-columns: 1fr;
+      }
+
+      .product-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .perks-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
   </style>
@@ -215,23 +347,84 @@
   <section class="fan-showcase">
     <div class="fan-grid">
 
-      <!-- NECK FANS -->
       <a href="#" class="fan-tile">
         <img src="https://via.placeholder.com/800x600?text=Neck+Fans" alt="Neck Fans">
         <div class="fan-label">Neck Fans</div>
       </a>
 
-      <!-- HANDHELD FANS -->
       <a href="#" class="fan-tile">
         <img src="https://via.placeholder.com/800x600?text=Handheld+Fans" alt="Handheld Fans">
         <div class="fan-label">Handheld Fans</div>
       </a>
 
-      <!-- TABLE FANS -->
       <a href="#" class="fan-tile">
         <img src="https://via.placeholder.com/800x600?text=Table+Fans" alt="Table Fans">
         <div class="fan-label">Table Fans</div>
       </a>
+
+    </div>
+  </section>
+
+  <!-- ===== BEST SELLERS ===== -->
+  <section class="best-sellers">
+    <h2>Our Best Sellers</h2>
+    <div class="product-row">
+      <a href="#" class="product-card">
+        <img src="https://via.placeholder.com/400x300?text=Fan+1" alt="Fan 1">
+        <h4>Portable Neck Fan</h4>
+        <div class="price">$24.99</div>
+        <div class="rating">⭐⭐⭐⭐☆</div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://via.placeholder.com/400x300?text=Fan+2" alt="Fan 2">
+        <h4>Handheld Mini Fan</h4>
+        <div class="price">$19.99</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://via.placeholder.com/400x300?text=Fan+3" alt="Fan 3">
+        <h4>Dual Mode Table Fan</h4>
+        <div class="price">$29.99</div>
+        <div class="rating">⭐⭐⭐⭐☆</div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://via.placeholder.com/400x300?text=Fan+4" alt="Fan 4">
+        <h4>Wearable Neck Fan</h4>
+        <div class="price">$26.99</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== PERKS / WHY CHOOSE WINDLY ===== -->
+  <section class="perks">
+    <h2>Perfect Fans for Your Summer Adventures</h2>
+    <div class="perks-grid">
+
+      <div class="perk-card">
+        <img src="https://via.placeholder.com/50?text=🎨" alt="Quality Design">
+        <p>Premium Quality Design</p>
+      </div>
+
+      <div class="perk-card">
+        <img src="https://via.placeholder.com/50?text=🚚" alt="Shipping">
+        <p>Fast Shipping: 8–15 Days</p>
+      </div>
+
+      <div class="perk-card">
+        <img src="https://via.placeholder.com/50?text=💰" alt="Money Back">
+        <p>30-Day Money Back Guarantee</p>
+      </div>
+
+      <div class="perk-card">
+        <img src="https://via.placeholder.com/50?text=🎁" alt="Free Shipping">
+        <p>Free Shipping on Orders $70+</p>
+      </div>
+
+      <div class="perk-card">
+        <img src="https://via.placeholder.com/50?text=☀️" alt="Summer Ready">
+        <p>Perfect for Summer Fun</p>
+      </div>
 
     </div>
   </section>
