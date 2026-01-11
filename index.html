@@ -5,7 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Windly | Portable Mini Fans</title>
+
+  <!-- Body Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Brand Font (Logo Only) -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -24,6 +29,24 @@
       color: inherit;
     }
 
+    /* ===== BRAND LOGO ===== */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .brand-text {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.6rem;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #4fd1c5, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     header {
       background: linear-gradient(135deg, #5f7cff, #9f6bff);
       padding: 40px 10%;
@@ -31,28 +54,21 @@
       border-bottom-left-radius: 50px;
       border-bottom-right-radius: 50px;
       color: white;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     header p {
       font-size: 1.2rem;
       margin-bottom: 20px;
-      color: #e0e0e0;
+      color: #eef1ff;
     }
 
     .cta-btn {
-      background: #fff;
+      background: #ffffff;
       color: #5f7cff;
       padding: 15px 40px;
       border-radius: 30px;
       font-weight: 600;
+      display: inline-block;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -62,7 +78,7 @@
     }
 
     nav {
-      margin-top: 20px;
+      margin: 20px 0;
     }
 
     .nav-menu {
@@ -70,11 +86,10 @@
       justify-content: center;
       gap: 30px;
       font-weight: 600;
-      position: relative;
+      list-style: none;
     }
 
     .nav-menu li {
-      list-style: none;
       position: relative;
     }
 
@@ -84,7 +99,6 @@
 
     .nav-menu a {
       color: white;
-      font-weight: 600;
       cursor: pointer;
     }
 
@@ -95,7 +109,7 @@
       left: 0;
       background: white;
       color: #0b0d12;
-      border-radius: 10px;
+      border-radius: 12px;
       min-width: 200px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       z-index: 10;
@@ -103,8 +117,7 @@
 
     .dropdown a {
       display: block;
-      padding: 10px 20px;
-      color: #0b0d12;
+      padding: 12px 20px;
     }
 
     .dropdown a:hover {
@@ -130,16 +143,6 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .feature-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .feature-card p {
-      font-size: 0.95rem;
-      color: #333;
-    }
-
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -155,38 +158,18 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .product-card img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
-
-    .product-card h4 {
-      margin-bottom: 10px;
-    }
-
-    .product-card span {
-      color: #5f7cff;
-      font-weight: 600;
-    }
-
     footer {
       background: #5f7cff;
       padding: 40px 10%;
       text-align: center;
       color: white;
-      font-size: 0.9rem;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      header p {
-        font-size: 1rem;
+      .brand-text {
+        font-size: 2.6rem;
       }
 
       .nav-menu {
@@ -197,8 +180,6 @@
       .dropdown {
         position: static;
         box-shadow: none;
-        border-radius: 10px;
-        margin-top: 5px;
       }
     }
   </style>
@@ -207,9 +188,20 @@
 <body>
 
   <header>
-    <h1>🌬️ Windly</h1>
-    <p>Stay cool anywhere with our stylish portable mini fans – handheld, wearable, and versatile designs for summer
-      adventures.</p>
+    <!-- LOGO -->
+    <div class="brand-logo">
+      <svg width="52" height="52" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="4" />
+        <path d="M50 18C60 32 60 46 50 52C40 46 40 32 50 18Z" fill="#4fd1c5" />
+        <path d="M82 50C68 60 54 60 48 50C54 40 68 40 82 50Z" fill="#ffffff" />
+        <path d="M50 82C40 68 40 54 50 48C60 54 60 68 50 82Z" fill="#4fd1c5" />
+        <circle cx="50" cy="50" r="6" fill="#ffffff" />
+      </svg>
+
+      <span class="brand-text">Windly</span>
+    </div>
+
+    <p>Portable cooling solutions designed for summer comfort — wherever you go.</p>
 
     <nav>
       <ul class="nav-menu">
@@ -228,51 +220,6 @@
 
     <a href="#products" class="cta-btn">Shop Now</a>
   </header>
-
-  <section id="features">
-    <div class="features">
-      <div class="feature-card">
-        <h3>❄️ Beat the Heat</h3>
-        <p>Portable fans designed to keep you cool wherever you go — beach, travel, or outdoors.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🌀 Versatile Designs</h3>
-        <p>Handheld, wearable, or dual-mode fans for maximum convenience and comfort.</p>
-      </div>
-      <div class="feature-card">
-        <h3>☀️ Summer Ready</h3>
-        <p>Lightweight, stylish, and perfect for sunny adventures and outdoor fun.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="products">
-    <h2 style="text-align:center; margin-bottom:40px;">Best Sellers</h2>
-    <div class="products">
-      <div class="product-card" id="handheld">
-        <img src="https://via.placeholder.com/400x300?text=Handheld+Fan" alt="Handheld Fan">
-        <h4>Portable Handheld Fan</h4>
-        <span>$19.99</span>
-      </div>
-      <div class="product-card" id="neck">
-        <img src="https://via.placeholder.com/400x300?text=Neck+Fan" alt="Neck Fan">
-        <h4>Wearable Neck Fan</h4>
-        <span>$24.99</span>
-      </div>
-      <div class="product-card" id="dual">
-        <img src="https://via.placeholder.com/400x300?text=Dual+Mode+Fan" alt="Dual Mode Fan">
-        <h4>Dual Mode Fan</h4>
-        <span>$29.99</span>
-      </div>
-    </div>
-  </section>
-
-  <section style="text-align:center;">
-    <h2>Cool Anywhere, Anytime</h2>
-    <p style="max-width:600px; margin:20px auto 40px;">Whether you're at the beach, hiking, or commuting, Windly fans
-      provide refreshing airflow to beat the heat in style.</p>
-    <a href="#products" class="cta-btn">Visit Store</a>
-  </section>
 
   <footer>
     <p>© 2026 Windly. All rights reserved.</p>
