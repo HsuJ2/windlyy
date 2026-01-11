@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gearora | Smart Tech Accessories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0b0d12;
+      color: #eaeaf0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: radial-gradient(circle at top, #1a1f36, #0b0d12);
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #b7b9d6;
+      margin-bottom: 40px;
+    }
+
+    .cta-btn {
+      background: linear-gradient(135deg, #5f7cff, #9f6bff);
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 600;
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(95, 124, 255, 0.4);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .feature-card {
+      background: #14182a;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      color: #b7b9d6;
+      font-size: 0.95rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #14182a;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h4 {
+      margin-bottom: 10px;
+    }
+
+    .product-card span {
+      color: #9f6bff;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #0b0d12;
+      padding: 40px 10%;
+      text-align: center;
+      color: #7c7fa6;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #0f172a;
+        text-align: center;
+        margin-bottom: 0.5 rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Gearora</h1>
+    <p>Premium phone, laptop, and smart accessories designed for performance, protection, and style.</p>
+    <a href="https://dkmfyh-mf.myshopify.com/products/wireless-bluetooth-sleep-headband-with-headphones"
+      class="cta-btn">Shop Now</a>
+  </header>
+
+  <section>
+    <div class="features">
+      <div class="feature-card">
+        <h3>⚡ Fast Shipping</h3>
+        <p>Direct-to-customer fulfillment with reliable worldwide delivery.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🛡️ Quality Tested</h3>
+        <p>Every product is selected for durability, compatibility, and performance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💎 Modern Design</h3>
+        <p>Minimalist aesthetics that match today’s premium devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 style="text-align:center; margin-bottom:40px;">Best Sellers</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x300" alt="Wireless Charger">
+        <h4>Magnetic Wireless Charger</h4>
+        <span>$29.99</span>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x300" alt="USB-C Hub">
+        <h4>7‑in‑1 USB‑C Hub</h4>
+        <span>$39.99</span>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://oss.teemdrop.com/goods-admin/2026/01/06/eab664e7-c0dc-48e4-b876-d7f5124e3b49.jpeg?x-oss-process=image/resize,m_fill,w_1200,h_1200/format,webp"
+          alt="Earbuds">
+        <h4>
+          <a href="https://dkmfyh-mf.myshopify.com/products/wireless-bluetooth-sleep-headband-with-headphones"
+            target="_blank" style="text-decoration:none; color: inherit;">
+            Wireless Bluetooth Sleep Headband with Headphones
+          </a>
+        </h4>
+        <span>$36.99</span>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x300" alt="Phone Stand">
+        <h4>Adjustable Phone Stand</h4>
+        <span>$19.99</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align:center;">
+    <h2>Built for Tech Lovers</h2>
+    <p style="max-width:600px; margin:20px auto 40px; color:#b7b9d6;">Whether you're working, gaming, or traveling, our
+      accessories enhance how you connect with technology.</p>
+    <a href="#" class="cta-btn">Visit Store</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Gearora. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
