@@ -8,7 +8,7 @@
 
   <!-- Body Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Brand Font (Logo Only) -->
+  <!-- Brand Font -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
@@ -18,10 +18,18 @@
       padding: 0;
     }
 
+    /* 🌴 SUMMER BACKGROUND */
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #a8edea, #fed6e3);
-      color: #0b0d12;
+      background: linear-gradient(to bottom,
+          #f6e7c1,
+          /* warm sand */
+          #fbd38d,
+          /* soft golden */
+          #f6ad55
+          /* sun-kissed orange */
+        );
+      color: #1a202c;
     }
 
     a {
@@ -42,13 +50,14 @@
       font-family: 'Pacifico', cursive;
       font-size: 3.6rem;
       letter-spacing: 0.05em;
-      background: linear-gradient(135deg, #4fd1c5, #ffffff);
+      background: linear-gradient(135deg, #fff3c4, #ffd166);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
+    /* 🌅 HEADER (SUNSET THEME) */
     header {
-      background: linear-gradient(135deg, #5f7cff, #9f6bff);
+      background: linear-gradient(135deg, #f97316, #facc15);
       padding: 40px 10%;
       text-align: center;
       border-bottom-left-radius: 50px;
@@ -59,12 +68,12 @@
     header p {
       font-size: 1.2rem;
       margin-bottom: 20px;
-      color: #eef1ff;
+      color: #fff7ed;
     }
 
     .cta-btn {
       background: #ffffff;
-      color: #5f7cff;
+      color: #f97316;
       padding: 15px 40px;
       border-radius: 30px;
       font-weight: 600;
@@ -74,7 +83,7 @@
 
     .cta-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(95, 124, 255, 0.4);
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
     }
 
     nav {
@@ -107,8 +116,8 @@
       position: absolute;
       top: 30px;
       left: 0;
-      background: white;
-      color: #0b0d12;
+      background: #fffaf0;
+      color: #1a202c;
       border-radius: 12px;
       min-width: 200px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -121,45 +130,38 @@
     }
 
     .dropdown a:hover {
-      background: #f0f0f0;
+      background: #fde68a;
     }
 
     section {
       padding: 60px 10%;
     }
 
-    .features {
+    /* 🏖️ CARDS */
+    .features,
+    .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 40px;
     }
 
-    .feature-card {
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .products {
-      display: grid;
+    .product-card {
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
     }
 
+    .feature-card,
     .product-card {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.7);
       border-radius: 20px;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     footer {
-      background: #5f7cff;
+      background: linear-gradient(135deg, #f97316, #facc15);
       padding: 40px 10%;
       text-align: center;
       color: white;
@@ -188,13 +190,12 @@
 <body>
 
   <header>
-    <!-- LOGO -->
     <div class="brand-logo">
       <svg width="52" height="52" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="50" r="46" stroke="white" stroke-width="4" />
-        <path d="M50 18C60 32 60 46 50 52C40 46 40 32 50 18Z" fill="#4fd1c5" />
+        <path d="M50 18C60 32 60 46 50 52C40 46 40 32 50 18Z" fill="#fde68a" />
         <path d="M82 50C68 60 54 60 48 50C54 40 68 40 82 50Z" fill="#ffffff" />
-        <path d="M50 82C40 68 40 54 50 48C60 54 60 68 50 82Z" fill="#4fd1c5" />
+        <path d="M50 82C40 68 40 54 50 48C60 54 60 68 50 82Z" fill="#fde68a" />
         <circle cx="50" cy="50" r="6" fill="#ffffff" />
       </svg>
 
