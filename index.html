@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gearora | Smart Tech Accessories</title>
+  <title>Windly | Portable Mini Fans</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -15,8 +15,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0b0d12;
-      color: #eaeaf0;
+      background: linear-gradient(to bottom, #a8edea, #fed6e3);
+      color: #0b0d12;
     }
 
     a {
@@ -25,29 +25,34 @@
     }
 
     header {
-      background: radial-gradient(circle at top, #1a1f36, #0b0d12);
-      padding: 80px 10%;
+      background: linear-gradient(135deg, #5f7cff, #9f6bff);
+      padding: 40px 10%;
       text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      color: white;
+      position: relative;
     }
 
     header h1 {
       font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     header p {
       font-size: 1.2rem;
-      color: #b7b9d6;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      color: #e0e0e0;
     }
 
     .cta-btn {
-      background: linear-gradient(135deg, #5f7cff, #9f6bff);
+      background: #fff;
+      color: #5f7cff;
       padding: 15px 40px;
       border-radius: 30px;
       font-weight: 600;
-      color: white;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -56,8 +61,58 @@
       box-shadow: 0 10px 25px rgba(95, 124, 255, 0.4);
     }
 
+    nav {
+      margin-top: 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      position: relative;
+    }
+
+    .nav-menu li:hover .dropdown {
+      display: block;
+    }
+
+    .nav-menu a {
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      color: #0b0d12;
+      border-radius: 10px;
+      min-width: 200px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #0b0d12;
+    }
+
+    .dropdown a:hover {
+      background: #f0f0f0;
+    }
+
     section {
-      padding: 80px 10%;
+      padding: 60px 10%;
     }
 
     .features {
@@ -67,10 +122,12 @@
     }
 
     .feature-card {
-      background: #14182a;
+      background: rgba(255, 255, 255, 0.6);
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .feature-card h3 {
@@ -79,8 +136,8 @@
     }
 
     .feature-card p {
-      color: #b7b9d6;
       font-size: 0.95rem;
+      color: #333;
     }
 
     .products {
@@ -90,10 +147,12 @@
     }
 
     .product-card {
-      background: #14182a;
+      background: rgba(255, 255, 255, 0.6);
       border-radius: 20px;
       padding: 20px;
       text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .product-card img {
@@ -107,29 +166,39 @@
     }
 
     .product-card span {
-      color: #9f6bff;
+      color: #5f7cff;
       font-weight: 600;
     }
 
     footer {
-      background: #0b0d12;
+      background: #5f7cff;
       padding: 40px 10%;
       text-align: center;
-      color: #7c7fa6;
+      color: white;
       font-size: 0.9rem;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #0f172a;
-        text-align: center;
-        margin-bottom: 0.5 rem;
+        font-size: 2.5rem;
       }
 
       header p {
         font-size: 1rem;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 5px;
       }
     }
   </style>
@@ -138,25 +207,41 @@
 <body>
 
   <header>
-    <h1>Gearora</h1>
-    <p>Premium phone, laptop, and smart accessories designed for performance, protection, and style.</p>
-    <a href="https://dkmfyh-mf.myshopify.com/products/wireless-bluetooth-sleep-headband-with-headphones"
-      class="cta-btn">Shop Now</a>
+    <h1>🌬️ Windly</h1>
+    <p>Stay cool anywhere with our stylish portable mini fans – handheld, wearable, and versatile designs for summer
+      adventures.</p>
+
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a>Shop Fans ▼</a>
+          <div class="dropdown">
+            <a href="#handheld">Handheld Fans</a>
+            <a href="#neck">Neck Fans</a>
+            <a href="#dual">Dual Mode Fans</a>
+          </div>
+        </li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#products">Best Sellers</a></li>
+      </ul>
+    </nav>
+
+    <a href="#products" class="cta-btn">Shop Now</a>
   </header>
 
-  <section>
+  <section id="features">
     <div class="features">
       <div class="feature-card">
-        <h3>⚡ Fast Shipping</h3>
-        <p>Direct-to-customer fulfillment with reliable worldwide delivery.</p>
+        <h3>❄️ Beat the Heat</h3>
+        <p>Portable fans designed to keep you cool wherever you go — beach, travel, or outdoors.</p>
       </div>
       <div class="feature-card">
-        <h3>🛡️ Quality Tested</h3>
-        <p>Every product is selected for durability, compatibility, and performance.</p>
+        <h3>🌀 Versatile Designs</h3>
+        <p>Handheld, wearable, or dual-mode fans for maximum convenience and comfort.</p>
       </div>
       <div class="feature-card">
-        <h3>💎 Modern Design</h3>
-        <p>Minimalist aesthetics that match today’s premium devices.</p>
+        <h3>☀️ Summer Ready</h3>
+        <p>Lightweight, stylish, and perfect for sunny adventures and outdoor fun.</p>
       </div>
     </div>
   </section>
@@ -164,45 +249,33 @@
   <section id="products">
     <h2 style="text-align:center; margin-bottom:40px;">Best Sellers</h2>
     <div class="products">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/400x300" alt="Wireless Charger">
-        <h4>Magnetic Wireless Charger</h4>
-        <span>$29.99</span>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/400x300" alt="USB-C Hub">
-        <h4>7‑in‑1 USB‑C Hub</h4>
-        <span>$39.99</span>
-      </div>
-      <div class="product-card">
-        <img
-          src="https://oss.teemdrop.com/goods-admin/2026/01/06/eab664e7-c0dc-48e4-b876-d7f5124e3b49.jpeg?x-oss-process=image/resize,m_fill,w_1200,h_1200/format,webp"
-          alt="Earbuds">
-        <h4>
-          <a href="https://dkmfyh-mf.myshopify.com/products/wireless-bluetooth-sleep-headband-with-headphones"
-            target="_blank" style="text-decoration:none; color: inherit;">
-            Wireless Bluetooth Sleep Headband with Headphones
-          </a>
-        </h4>
-        <span>$36.99</span>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/400x300" alt="Phone Stand">
-        <h4>Adjustable Phone Stand</h4>
+      <div class="product-card" id="handheld">
+        <img src="https://via.placeholder.com/400x300?text=Handheld+Fan" alt="Handheld Fan">
+        <h4>Portable Handheld Fan</h4>
         <span>$19.99</span>
+      </div>
+      <div class="product-card" id="neck">
+        <img src="https://via.placeholder.com/400x300?text=Neck+Fan" alt="Neck Fan">
+        <h4>Wearable Neck Fan</h4>
+        <span>$24.99</span>
+      </div>
+      <div class="product-card" id="dual">
+        <img src="https://via.placeholder.com/400x300?text=Dual+Mode+Fan" alt="Dual Mode Fan">
+        <h4>Dual Mode Fan</h4>
+        <span>$29.99</span>
       </div>
     </div>
   </section>
 
   <section style="text-align:center;">
-    <h2>Built for Tech Lovers</h2>
-    <p style="max-width:600px; margin:20px auto 40px; color:#b7b9d6;">Whether you're working, gaming, or traveling, our
-      accessories enhance how you connect with technology.</p>
-    <a href="#" class="cta-btn">Visit Store</a>
+    <h2>Cool Anywhere, Anytime</h2>
+    <p style="max-width:600px; margin:20px auto 40px;">Whether you're at the beach, hiking, or commuting, Windly fans
+      provide refreshing airflow to beat the heat in style.</p>
+    <a href="#products" class="cta-btn">Visit Store</a>
   </section>
 
   <footer>
-    <p>© 2026 Gearora. All rights reserved.</p>
+    <p>© 2026 Windly. All rights reserved.</p>
   </footer>
 
 </body>
