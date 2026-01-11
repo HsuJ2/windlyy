@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Windly | Portable Mini Fans</title>
 
-  <!-- Body Font -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Brand Font -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
@@ -18,18 +17,10 @@
       padding: 0;
     }
 
-    /* 🌴 SUMMER BACKGROUND */
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom,
-          #f6e7c1,
-          /* warm sand */
-          #fbd38d,
-          /* soft golden */
-          #f6ad55
-          /* sun-kissed orange */
-        );
-      color: #1a202c;
+      background: linear-gradient(to bottom, #f4efe6, #f1e6d2);
+      color: #1f2937;
     }
 
     a {
@@ -37,151 +28,84 @@
       color: inherit;
     }
 
-    /* ===== BRAND LOGO ===== */
-    .brand-logo {
+    /* ===== TOP NAV BAR ===== */
+    header {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 18px 6%;
+    }
+
+    .nav-container {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+
+    /* LEFT: LOGO */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .brand-text {
       font-family: 'Pacifico', cursive;
-      font-size: 3.6rem;
-      letter-spacing: 0.05em;
-      background: linear-gradient(135deg, #fff3c4, #ffd166);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      color: #b45309;
     }
 
-    /* 🌅 HEADER (SUNSET THEME) */
-    header {
-      background: linear-gradient(135deg, #f97316, #facc15);
-      padding: 40px 10%;
-      text-align: center;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      color: white;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #fff7ed;
-    }
-
-    .cta-btn {
-      background: #ffffff;
-      color: #f97316;
-      padding: 15px 40px;
-      border-radius: 30px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
-    }
-
-    nav {
-      margin: 20px 0;
-    }
-
-    .nav-menu {
+    /* CENTER: MAIN MENU */
+    .main-menu {
       display: flex;
-      justify-content: center;
-      gap: 30px;
+      gap: 36px;
+      font-size: 1rem;
       font-weight: 600;
-      list-style: none;
     }
 
-    .nav-menu li {
-      position: relative;
+    .main-menu a {
+      color: #374151;
+      transition: color 0.2s ease;
     }
 
-    .nav-menu li:hover .dropdown {
-      display: block;
+    .main-menu a:hover {
+      color: #b45309;
     }
 
-    .nav-menu a {
-      color: white;
+    /* RIGHT: ICONS */
+    .nav-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.2rem;
       cursor: pointer;
     }
 
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 30px;
-      left: 0;
-      background: #fffaf0;
-      color: #1a202c;
-      border-radius: 12px;
-      min-width: 200px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      z-index: 10;
+    .nav-icons span {
+      transition: opacity 0.2s ease;
     }
 
-    .dropdown a {
-      display: block;
-      padding: 12px 20px;
+    .nav-icons span:hover {
+      opacity: 0.7;
     }
 
-    .dropdown a:hover {
-      background: #fde68a;
-    }
-
+    /* SECTIONS */
     section {
-      padding: 60px 10%;
-    }
-
-    /* 🏖️ CARDS */
-    .features,
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-    }
-
-    .product-card {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-
-    .feature-card,
-    .product-card {
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 80px 10%;
     }
 
     footer {
-      background: linear-gradient(135deg, #f97316, #facc15);
+      background: rgba(255, 255, 255, 0.6);
       padding: 40px 10%;
       text-align: center;
-      color: white;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
+      color: #374151;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    @media (max-width: 600px) {
-      .brand-text {
-        font-size: 2.6rem;
-      }
-
-      .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .dropdown {
-        position: static;
-        box-shadow: none;
+    @media (max-width: 900px) {
+      .main-menu {
+        display: none;
       }
     }
   </style>
@@ -190,36 +114,37 @@
 <body>
 
   <header>
-    <div class="brand-logo">
-      <svg width="52" height="52" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="4" />
-        <path d="M50 18C60 32 60 46 50 52C40 46 40 32 50 18Z" fill="#fde68a" />
-        <path d="M82 50C68 60 54 60 48 50C54 40 68 40 82 50Z" fill="#ffffff" />
-        <path d="M50 82C40 68 40 54 50 48C60 54 60 68 50 82Z" fill="#fde68a" />
-        <circle cx="50" cy="50" r="6" fill="#ffffff" />
-      </svg>
+    <div class="nav-container">
 
-      <span class="brand-text">Windly</span>
+      <!-- LEFT -->
+      <div class="brand">
+        <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" stroke="#b45309" stroke-width="4" />
+          <path d="M50 18C60 32 60 46 50 52C40 46 40 32 50 18Z" fill="#fcd34d" />
+          <path d="M82 50C68 60 54 60 48 50C54 40 68 40 82 50Z" fill="#fde68a" />
+          <path d="M50 82C40 68 40 54 50 48C60 54 60 68 50 82Z" fill="#fcd34d" />
+          <circle cx="50" cy="50" r="6" fill="#b45309" />
+        </svg>
+
+        <span class="brand-text">Windly</span>
+      </div>
+
+      <!-- CENTER -->
+      <nav class="main-menu">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Explore</a>
+        <a href="#">Support</a>
+      </nav>
+
+      <!-- RIGHT -->
+      <div class="nav-icons">
+        <span title="Search">🔍</span>
+        <span title="Profile">👤</span>
+        <span title="Cart">🛒</span>
+      </div>
+
     </div>
-
-    <p>Portable cooling solutions designed for summer comfort — wherever you go.</p>
-
-    <nav>
-      <ul class="nav-menu">
-        <li>
-          <a>Shop Fans ▼</a>
-          <div class="dropdown">
-            <a href="#handheld">Handheld Fans</a>
-            <a href="#neck">Neck Fans</a>
-            <a href="#dual">Dual Mode Fans</a>
-          </div>
-        </li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#products">Best Sellers</a></li>
-      </ul>
-    </nav>
-
-    <a href="#products" class="cta-btn">Shop Now</a>
   </header>
 
   <footer>
